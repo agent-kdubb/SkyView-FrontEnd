@@ -52,11 +52,12 @@ const Navbar = () => {
     // Navigate variable to useNavigate function.
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
+
     // Retrieves user from redux
     const user: UserState = useAppSelector(currentUser);
 
     const { cart } = useContext(CartContext);
-    const cartLength =  cart.length;
+    const cartLength = cart.length;
 
     const logout = function () {
         dispatch(updateUser({
